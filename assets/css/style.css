@@ -3,6 +3,8 @@ html, body {
     background-image:url(../images/smallbackground.png);
     background-repeat: repeat;
     margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -60,6 +62,7 @@ nav a:hover {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 120px;
     border-style: solid;
     border-width: 0.10pt;
     border-color: #cccccc;
@@ -107,31 +110,69 @@ nav a:hover {
 
 .portfolioContainer h3 {
     background-color: #4aaaa5;
-    padding: 15px;
-    text-align: center;
-
+    padding: 20px;
+    margin: auto;
 }
 
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
+* {
+    box-sizing: border-box;
 }
 
-.text-block {
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.content h3 {
     position: absolute;
-    bottom: 0;
-    background: #4aaaa5;
-    background: #777777; /*see-through*/
-    width: 100px;
-    transition: .5s ease;
-
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 60%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 91%; /* Set the width of the positioned div */
 }
 
-.portfolioContainer:hover .text-block {
-    opacity: 1;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+  }
 }
 
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+  }
+}
 
 /************CONTACT INFO**************/
 input[type=text], select, textarea {
