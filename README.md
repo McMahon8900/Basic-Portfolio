@@ -1,6 +1,9 @@
 # Basic-Portfolio
 
 # Preview
+About Me
+![About-Me](./assets/images/AboutMe_page.png)
+Portfolio
 
 Contact Page
 
