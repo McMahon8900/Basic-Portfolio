@@ -60,3 +60,5 @@
 
 # Author
 Linsay McMahon - [Github](https://github.com/McMahon8900)
+
+Link to deployed site - https://mcmahon8900.github.io/Basic-Portfolio/
